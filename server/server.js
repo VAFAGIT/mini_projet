@@ -11,10 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-app.use("/api/file", require("./routes/file"));
+app.use("/api/file", require("./routes/fileRoutes"));
+app.use("/api/user", require("./routes/userRoutes"));
 
 //listen to port
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`); 
 });
 
